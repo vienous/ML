@@ -1,18 +1,13 @@
-print(__doc__)
-
-# Code source: Jaques Grobler
-# License: BSD 3 clause
-
-
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import datasets, linear_model
 from sklearn.metrics import mean_squared_error, r2_score
-
+#均方误差mse
 # Load the diabetes dataset
 diabetes = datasets.load_diabetes()
 
 #print(diabetes.data)
+#不加np.newaxis [:,2]数据是一维的 2表示取第二列 加了之后shape 是(n,1)
 # Use only one feature
 diabetes_X = diabetes.data[:, np.newaxis, 2]
 
@@ -47,6 +42,7 @@ print('Variance score: %.2f' % r2_score(diabetes_y_test, diabetes_y_pred))
 plt.scatter(diabetes_X_test, diabetes_y_test,  color='black')
 plt.plot(diabetes_X_test, diabetes_y_pred, color='blue', linewidth=3)
 
+#刻度
 plt.xticks(())
 plt.yticks(())
 
