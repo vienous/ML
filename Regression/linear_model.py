@@ -1,5 +1,3 @@
-
-```python
 print(__doc__)
 
 # Code source: Jaques Grobler
@@ -53,4 +51,3 @@ plt.xticks(())
 plt.yticks(())
 
 plt.show()
-```
